@@ -1,0 +1,1237 @@
+/* =====================================
+ОСНОВНЫЕ НАСТРОЙКИ
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090a0b;
+    color: #f5f5f3;
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 12px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: 91.5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-dark {
+    background: #090a0b;
+}
+
+/* =====================================
+2. ШАПКА САЙТА
+===================================== */
+.header {
+
+    height: 72px;
+    padding: 0 4.2%;
+    display: flex;
+    align-items: center;
+    background: #090a0b;
+    border-bottom: 1px solid #252627;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+
+    background: #dcff00;
+    color: #10110b;
+    font-size: 18px;
+}
+
+.navigation {
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #9b9b9b;
+    font-size: 14px;
+    white-space: nowrap;
+
+}
+
+.navigation a {
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #dcff00;
+}
+
+.header-phone {
+
+    font-size: 13px;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: 12px;
+
+}
+
+.button {
+    min-height: 45px;
+    padding: 0 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    border: 1px solid transparent;
+
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button-green {
+    background: #dcff00;
+    color: #10110b;
+    transition: 0.3s;
+}
+
+.button-green:hover {
+    background: #8fa800;
+}
+
+.button-dark {
+    border-color: #454647;
+    color: #eee;
+}
+
+.header .button {
+    min-height: 42px;
+    padding: 0 18px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* =====================================
+3. ГЛАВНЫЙ ЭКРАН
+===================================== */
+.hero {
+    height: min(920px, 100vh);
+    min-height: 650px;
+    position: relative;
+
+    background:
+        url("Home.png") center 45% / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg,
+            rgba(4, 5, 6, 0.94) 0%,
+            rgba(4, 5, 6, 0.74) 42%,
+            rgba(4, 5, 6, 0.12) 100%),
+        linear-gradient(0deg,
+            rgba(4, 5, 6, 0.8),
+            transparent 40%);
+}
+
+.hero-content {
+    position: relative;
+    padding-top: 40px;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #858585;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+
+    color: #a9a9a3;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-label span {
+    width: 23px;
+    height: 1px;
+    background: #d9fa00;
+}
+
+.hero .section-label {
+    color: #dfff00;
+}
+
+.hero h1 {
+    max-width: 700px;
+    margin-bottom: 95px;
+
+    font-family: "Oswald", Impact, sans-serif;
+    font-size: clamp(64px, 9vw, 112px);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.hero-description {
+    max-width: 500px;
+    margin-bottom: 30px;
+
+    color: #b7b7b7;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.hero-statistics {
+    position: absolute;
+    bottom: 0;
+    right: 4.2%;
+    display: flex;
+
+    background: rgba(10, 11, 12, 0.65);
+    border-top: 1px solid #292a2a;
+}
+
+.stat-item {
+    min-width: 125px;
+    padding: 18px 24px;
+    border-left: 1px solid #292a2a;
+}
+
+.stat-item strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #dcff00;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.stat-item small {
+    color: #777;
+    font-size: 14px;
+}
+
+/* =====================================
+4. ПОЛОСА С МАРКАМИ
+===================================== */
+.brands-strip {
+    background: #101112;
+    border-bottom: 1px solid #242526;
+}
+
+.brands-content {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brands-content>span {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.brands-list {
+    display: flex;
+    gap: 28px;
+    color: #bdbdbd;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* =====================================
+5. О КОМПАНИИ
+*/
+.about {
+    padding: 125px 0 120px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+}
+
+.about h2 {
+    font-family: "Oswald", Impact, sans-serif;
+    font-size: clamp(42px, 5.2vw, 67px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -1px;
+}
+
+.about-information {
+    padding-top: 32px;
+}
+
+.about-main-text {
+    margin-bottom: 25px;
+    color: #d0d0d0;
+    font-size: 22px;
+    line-height: 1.55;
+}
+
+.about-description {
+    max-width: 590px;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.production-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 35px;
+}
+
+.step {
+    padding: 0 20px;
+    border-left: 1px solid #252627;
+}
+
+.step:first-child {
+    padding-left: 0;
+    border: none;
+}
+
+.step span {
+    color: #dcff00;
+    font-size: 14px;
+}
+
+.step h3 {
+    margin: 14px 0 8px;
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.step p {
+    color: #686868;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =====================================
+6. ПРОДУКЦИЯ
+===================================== */
+.products {
+    padding: 105px 0 110px;
+    background: #f0f1ed;
+    color: #111;
+}
+
+.products-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.products .section-label {
+    color: #777;
+}
+
+.products h2 {
+    font-family: "Oswald", Impact, sans-serif;
+    font-size: clamp(42px, 5.2vw, 66px);
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.product-filters {
+    display: flex;
+    gap: 7px;
+    padding-bottom: 3px;
+}
+
+.filter-button {
+    padding: 12px 15px;
+    background: #fff;
+    border: 1px solid #d5d6d1;
+
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.filter-button:hover {
+    background: #d5d6d1;
+    border-color: #d5d6d1;
+    color: #101112;
+}
+
+.filter-button.active {
+    background: #101112;
+    border-color: #101112;
+    color: #fff;
+}
+
+.filter-button.active:hover {
+    background: #252627;
+    border-color: #252627;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.product-card {
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    height: clamp(230px, 30vw, 390px);
+    position: relative;
+
+    background-image:
+        linear-gradient(0deg,
+            rgba(0, 0, 0, 0.32),
+            transparent 50%),
+        url("Product.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.product-image-1 {
+    background-position: 52% 50%;
+}
+
+.product-image-2 {
+    background-position: 62% 50%;
+}
+
+.product-image-3 {
+    background-position: 72% 50%;
+}
+
+.product-material {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 7px 10px;
+
+    background: rgba(12, 13, 14, 0.75);
+    color: #eee;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-number {
+    position: absolute;
+    right: 18px;
+    bottom: 8px;
+    color: rgba(255, 255, 255, 0.4);
+
+    font-family: "Oswald", sans-serif;
+    font-size: 38px;
+}
+
+.product-information {
+    min-height: 90px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-information small {
+    color: #999;
+    font-size: 12px;
+}
+
+.product-information h3 {
+    margin: 6px 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.product-size {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.product-arrow {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.product-arrow:hover {
+    background: #dcff00;
+    border-color: #dcff00;
+    color: #101112;
+}
+
+.products-description {
+    margin-top: 27px;
+    color: #999;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =====================================
+7. ПРЕИМУЩЕСТВА
+===================================== */
+.advantages {
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+.advantages-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 49%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            #090a0b 0%,
+            rgba(9, 10, 11, 0.15) 40%),
+        url("svarka.png") center / cover no-repeat;
+
+    opacity: 0.8;
+}
+
+.advantages-content {
+    position: relative;
+    padding: 115px 0;
+}
+
+.advantages-information {
+    width: 57%;
+}
+
+.advantages h2 {
+    margin-bottom: 30px;
+    font-family: "Oswald", Impact, sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.advantages-list {
+    border-top: 1px solid #292a2a;
+}
+
+.advantage-item {
+    display: grid;
+    grid-template-columns: 30px 150px 1fr;
+    gap: 15px;
+    align-items: center;
+    padding: 19px 0;
+
+    border-bottom: 1px solid #292a2a;
+}
+
+.advantage-icon {
+    color: #dfff00;
+    font-size: 20px;
+}
+
+.advantage-item h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.advantage-item p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =====================================
+8. ИНДИВИДУАЛЬНЫЙ ПРОЕКТ
+===================================== */
+.project {
+    padding: 70px 0 95px;
+}
+
+.project-block {
+    min-height: 440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: #191a1b;
+}
+
+.project-image {
+    min-height: 440px;
+    position: relative;
+
+    background:
+        url("svarka2.png") center / cover no-repeat;
+}
+
+.project-image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 16px;
+
+    background: #dcff00;
+    color: #111;
+
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-information {
+    padding: 65px 9%;
+}
+
+.project-information h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(36px, 4.3vw, 54px);
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.project-information>p {
+    margin: 22px 0;
+    color: #929292;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.project-steps {
+    margin: 20px 0 28px;
+}
+
+.project-steps div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 11px 0;
+
+    color: #bcbcbc;
+    font-size: 13px;
+}
+
+.project-steps span {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #676b25;
+    color: #dcff00;
+}
+
+/* =====================================
+9. КОНТАКТЫ
+===================================== */
+.contacts {
+    padding: 100px 0 90px;
+    background: #dcff00;
+    color: #111;
+}
+
+.contacts-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+    align-items: center;
+}
+
+.contacts .section-label {
+    color: #4f560d;
+}
+
+.contacts .section-label span {
+    background: #111;
+}
+
+.contacts h2 {
+    margin-bottom: 24px;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(58px, 7vw, 88px);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.contacts-information>p {
+    max-width: 470px;
+    margin-bottom: 32px;
+
+    color: #515a16;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact-details a,
+.contact-details div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 14px 0;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-details span {
+    font-size: 17px;
+}
+
+.contact-details div {
+    color: #777;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+/* =====================================
+10. ФОРМА ЗАЯВКИ
+===================================== */
+.contact-form {
+    padding: 35px 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background: #111213;
+    color: #eee;
+}
+
+.contact-form h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px 0 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 55px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555;
+}
+
+.form-button {
+    width: 100%;
+}
+
+.contact-form>small {
+    color: #555;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =====================================
+11. ПОДВАЛ
+===================================== */
+.footer {
+    background: #090a0b;
+    border-top: 1px solid #252627;
+}
+
+.footer-content {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .logo {
+    font-size: 13px;
+}
+
+.footer .logo-icon {
+    width: 21px;
+    height: 21px;
+    font-size: 15px;
+}
+
+.footer-content p {
+    color: #777;
+    font-size: 12px;
+}
+
+.footer-top:hover{
+    color: #dfff00;
+}
+
+.footer-top {
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* =====================================
+12. АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ
+===================================== */
+@media (max-width: 900px) {
+    .navigation {
+        gap: 13px;
+    }
+
+    .header {
+        padding: 0 3%;
+    }
+
+    .header-phone {
+        display: none;
+    }
+
+    .hero h1 {
+        margin-bottom: 65px;
+    }
+
+    .about {
+        padding: 90px 0;
+    }
+
+    .about-content {
+        gap: 5%;
+    }
+
+    .products {
+        padding: 80px 0;
+    }
+
+    .product-information {
+        padding: 12px;
+    }
+
+    .product-information h3 {
+        font-size: 15px;
+    }
+
+    .advantages-information {
+        width: 65%;
+    }
+
+    .project-information {
+        padding: 45px 7%;
+    }
+
+    .contacts {
+        padding: 75px 0;
+    }
+}
+
+/* =====================================
+13. АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ
+===================================== */
+@media (max-width: 650px) {
+    .container {
+        width: 89%;
+    }
+
+    /* Шапка */
+
+    .header {
+        height: 62px;
+    }
+
+    .navigation {
+        display: none;
+
+        position: absolute;
+        top: 62px;
+        left: 0;
+
+        width: 100%;
+        padding: 20px 6%;
+
+        background: #101112;
+
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .header .button {
+        min-height: 36px;
+        padding: 0 10px;
+        margin-left: auto;
+        margin-right: 12px;
+
+        font-size: 8px;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        background: none;
+        border: none;
+        padding: 8px;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 23px;
+        height: 1px;
+
+        margin: 6px 0;
+
+        background: #fff;
+    }
+
+
+    /* Главный экран */
+
+    .hero {
+        min-height: 700px;
+        height: 92vh;
+
+        background-position: 58% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(4, 5, 6, 0.9),
+                rgba(4, 5, 6, 0.35)),
+            linear-gradient(0deg,
+                rgba(4, 5, 6, 0.8),
+                transparent 65%);
+    }
+
+    .hero-content {
+        padding-top: 20px;
+    }
+
+    .hero h1 {
+        font-size: 62px;
+        margin-bottom: 55px;
+    }
+
+    .hero-description {
+        max-width: 330px;
+        font-size: 11px;
+    }
+
+    .hero-statistics {
+        left: 5.5%;
+        right: 5.5%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat-item {
+        min-width: 0;
+        padding: 12px 8px;
+    }
+
+    .stat-item strong {
+        font-size: 14px;
+    }
+
+    .stat-item small {
+        font-size: 7px;
+    }
+
+
+    /* Марки */
+
+    .brands-content {
+        padding: 15px 0;
+        display: block;
+    }
+
+    .brands-content>span {
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    .brands-list {
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 11px;
+    }
+
+
+    /* О компании */
+
+    .about {
+        padding: 75px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about h2 {
+        font-size: 51px;
+    }
+
+    .about-information {
+        padding-top: 0;
+    }
+
+    .about-main-text {
+        font-size: 17px;
+    }
+
+    .step {
+        padding: 0 10px;
+    }
+
+    .step h3 {
+        font-size: 12px;
+    }
+
+    .step p {
+        font-size: 9px;
+    }
+
+
+    /* Продукция */
+
+    .products {
+        padding: 70px 0;
+    }
+
+    .products-heading {
+        display: block;
+    }
+
+    .products h2 {
+        font-size: 48px;
+    }
+
+    .product-filters {
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        padding: 10px;
+        font-size: 8px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-image {
+        height: 290px;
+    }
+
+    .product-information {
+        min-height: 83px;
+    }
+
+    .products-description br {
+        display: none;
+    }
+
+
+    /* Преимущества */
+
+    .advantages {
+        min-height: 0;
+    }
+
+    .advantages-background {
+        width: 100%;
+        opacity: 0.22;
+        background-position: center;
+    }
+
+    .advantages-content {
+        padding: 75px 0;
+    }
+
+    .advantages-information {
+        width: 100%;
+    }
+
+    .advantages h2 {
+        font-size: 43px;
+    }
+
+    .advantage-item {
+        grid-template-columns: 25px 125px 1fr;
+        gap: 9px;
+        padding: 15px 0;
+    }
+
+    .advantage-item h3 {
+        font-size: 12px;
+    }
+
+    .advantage-item p {
+        font-size: 9px;
+    }
+
+
+    /* Проект */
+
+    .project {
+        padding: 35px 0 65px;
+    }
+
+    .project-block {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        min-height: 260px;
+    }
+
+    .project-information {
+        padding: 35px 7%;
+    }
+
+    .project-information h2 {
+        font-size: 39px;
+    }
+
+
+    /* Контакты */
+
+    .contacts {
+        padding: 70px 0;
+    }
+
+    .contacts-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contacts h2 {
+        font-size: 65px;
+    }
+
+    .contact-form {
+        padding: 28px 23px;
+    }
+
+
+    /* Подвал */
+
+    .footer-content {
+        padding: 15px 0;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .footer .logo {
+        font-size: 9px;
+    }
+
+    .footer-content p {
+        order: 3;
+        width: 100%;
+    }
+}
