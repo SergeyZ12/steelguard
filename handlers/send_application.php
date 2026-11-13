@@ -11,7 +11,7 @@ $name = trim($_POST["name"] ?? "");
 $phone = trim($_POST["phone"] ?? "");
 $comment = trim($_POST["comment"] ?? "");
 
-if ($name === ""  $phone === ""  $comment === "") {
+if ($name === "" || $phone === "" || $comment === "") {
     exit("Заполните все поля формы.");
 }
 
