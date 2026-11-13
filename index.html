@@ -16,7 +16,7 @@
 
     <a href="#home" class="logo">
         <span class="logo-icon">◈</span>
-        <span>STALWORKS</span>
+        <span>STEELGUARD</span>
     </a>
 
     <nav class="navigation">
@@ -150,7 +150,7 @@
             <div class="about-information">
 
                 <p class="about-main-text">
-                    STALWORKS — производственная компания,
+                    STEELGUARD — производственная компания,
                     специализирующаяся на внешнем тюнинге
                     китайских внедорожников и пикапов.
                 </p>
@@ -218,15 +218,15 @@
 
                 <div class="product-filters">
 
-                    <button class="filter-button active">
+                    <button class="filter-button active" data-filter="all">
                         Все изделия
                     </button>
 
-                    <button class="filter-button">
+                    <button class="filter-button" data-filter="stainless">
                         Нержавеющая сталь
                     </button>
 
-                    <button class="filter-button">
+                    <button class="filter-button" data-filter="black">
                         Чёрная сталь
                     </button>
 
@@ -238,7 +238,7 @@
             <div class="product-grid">
 
                 <!-- ТОВАР 1 -->
-                <article class="product-card">
+                <article class="product-card" data-material="stainless">
 
                     <div class="product-image product-image-1">
 
@@ -268,7 +268,7 @@
 
 
                 <!-- ТОВАР 2 -->
-                <article class="product-card">
+                <article class="product-card" data-material="stainless">
 
                     <div class="product-image product-image-2">
 
@@ -298,7 +298,7 @@
 
 
                 <!-- ТОВАР 3 -->
-                <article class="product-card">
+                <article class="product-card" data-material="black">
 
                     <div class="product-image product-image-3">
 
@@ -529,9 +529,9 @@
                         +7 (900) 000-00-00
                     </a>
 
-                    <a href="mailto:info@stalworks.ru">
+                    <a href="mailto:info@steelguard.ru">
                         <span>✉️</span>
-                        info@stalworks.ru
+                        info@steelguard.ru
                     </a>
 
                     <div>
@@ -550,28 +550,21 @@
                 <h3>ОСТАВИТЬ ЗАПРОС</h3>
 
                 <div class="form-group">
-
                     <label for="name">ВАШЕ ИМЯ</label>
                     <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
-
                 </div>
 
-
                 <div class="form-group">
-
                     <label for="phone">ТЕЛЕФОН</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
-
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" maxlength="18"
+                        autocomplete="tel" required>
                 </div>
-
 
                 <div class="form-group">
-
                     <label for="comment">КОММЕНТАРИЙ</label>
-                    <textarea id="comment" name="comment" placeholder="Марка, модель, год выпуска и ваш вопрос" required></textarea>
-
+                    <textarea id="comment" name="comment" placeholder="Марка, модель, год выпуска и ваш вопрос"
+                        required></textarea>
                 </div>
-
 
                 <button type="submit" class="button button-green form-button">
                     Подготовить письмо <span>→</span>
@@ -581,6 +574,7 @@
                     Нажимая кнопку, вы соглашаетесь с политикой
                     обработки персональных данных.
                 </small>
+
 
             </form>
 
@@ -598,11 +592,11 @@
 
         <a href="#home" class="logo">
             <span class="logo-icon">◈</span>
-            <span>STALWORKS</span>
+            <span>STEELGUARD</span>
         </a>
 
         <p>
-            © 2025 STALWORKS. Тюнинг китайских внедорожников и пикапов.
+            © 2025 STEELGUARD. Тюнинг китайских внедорожников и пикапов.
         </p>
 
         <a href="#home" class="footer-top">
