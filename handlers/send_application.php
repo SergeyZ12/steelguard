@@ -1,6 +1,6 @@
 <?php
 
-require_once DIR . "/../config/db.php";
+require_once __DIR__ . "/../config/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
